@@ -39,3 +39,7 @@ opt.timeoutlen = 200
 g.completeopt = 'menu,menuone,noselect,noinsert'
 g.mapleader = ' '
 
+-- Colorscheme
+cmd ([[
+  colorscheme onedark
+]])

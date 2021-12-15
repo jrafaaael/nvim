@@ -1,6 +1,8 @@
 return require('packer').startup({function()
   use 'wbthomason/packer.nvim'
 
+  -- UI
+  use 'navarasu/onedark.nvim'
 end, 
 config = {
   display = {
