@@ -3,6 +3,10 @@ return require('packer').startup({function()
 
   -- UI
   use 'navarasu/onedark.nvim'
+  use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  }
 end, 
 config = {
   display = {
