@@ -19,6 +19,8 @@ return require('packer').startup({function()
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'
   }
+  -- IDE
+  use 'lukas-reineke/indent-blankline.nvim'
 end, 
 config = {
   display = {
