@@ -27,18 +27,3 @@ map('v', '<S-TAB>', '<gv', {noremap = true, silent = false})
 map('i', 'jk', '<esc>', {noremap = true, silent = false})
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = false})
 
-map('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
-map('n', '<A-l>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
-map('i', '<A-l>', '<Esc>:BufferLineCycleNext<CR>', {noremap = true, silent = true})
-map('v', '<A-l>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
-map('n', '<A-h>', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
-map('i', '<A-h>', '<Esc>:BufferLineCyclePrev<CR>', {noremap = true, silent = true})
-map('v', '<A-h>', ':BufferLineCyclePrev<CR>', {noremap = true, silent = true})
-map('n', '<A-Right>', ':BufferLineMoveNext<CR>', {noremap = true, silent = true})
-map('v', '<A-Right>', ':BufferLineMoveNext<CR>', {noremap = true, silent = true})
-map('n', '<A-Left>', ':BufferLineMovePrev<CR>', {noremap = true, silent = true})
-map('v', '<A-Left>', ':BufferLineMovePrev<CR>', {noremap = true, silent = true})
-for i = 0, 9, 1 do
-  map('n', '<A-' .. i .. '>', '<Cmd>BufferLineGoToBuffer' .. i .. '<CR>', {noremap = true, silent = true})
-end
-
