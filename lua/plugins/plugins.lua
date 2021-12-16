@@ -21,6 +21,7 @@ return require('packer').startup({function()
   }
   -- IDE
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'ray-x/lsp_signature.nvim'
 end, 
 config = {
   display = {
