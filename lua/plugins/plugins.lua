@@ -29,6 +29,7 @@ return require('packer').startup({function()
   use 'terrortylor/nvim-comment'
   use 'windwp/nvim-ts-autotag'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use 'ahmedkhalf/project.nvim'
 end, 
 config = {
   display = {
