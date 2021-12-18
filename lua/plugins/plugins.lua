@@ -27,6 +27,7 @@ return require('packer').startup({function()
   use 'windwp/nvim-autopairs'
   use 'norcalli/nvim-colorizer.lua'
   use 'terrortylor/nvim-comment'
+  use 'windwp/nvim-ts-autotag'
 end, 
 config = {
   display = {
