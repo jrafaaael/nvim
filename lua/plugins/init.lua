@@ -1,5 +1,6 @@
 require('plugins.plugins')
 
+require('plugins.nvim-comment')
 require('plugins.nvim-tree')
 require('plugins.nvim-autopairs')
 require('plugins.bufferline')

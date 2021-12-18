@@ -26,6 +26,7 @@ return require('packer').startup({function()
   use 'tami5/lspsaga.nvim'
   use 'windwp/nvim-autopairs'
   use 'norcalli/nvim-colorizer.lua'
+  use 'terrortylor/nvim-comment'
 end, 
 config = {
   display = {
