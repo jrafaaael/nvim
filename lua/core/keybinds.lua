@@ -26,6 +26,12 @@ map('v', '<TAB>', '>gv', {noremap = true, silent = false})
 map('v', '<S-TAB>', '<gv', {noremap = true, silent = false})
 map('i', 'jk', '<esc>', {noremap = true, silent = false})
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = false})
+map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap = true})
+
+map('n', '<leader>/', ':CommentToggle<CR>', {noremap = true})
+map('v', '<leader>/', ':CommentToggle<CR>', {noremap = true})
+
+map('n', '<leader>;', '<cmd>Alpha<CR>', {noremap = true, silent = true})
 
 map('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
 map('n', '<A-l>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
@@ -41,3 +47,7 @@ map('v', '<A-Left>', ':BufferLineMovePrev<CR>', {noremap = true, silent = true})
 for i = 0, 9, 1 do
   map('n', '<A-' .. i .. '>', '<Cmd>BufferLineGoToBuffer' .. i .. '<CR>', {noremap = true, silent = true})
 end
+map('n', '<leader>Pc', ':PackerClean<CR>', {noremap = true, silent = true})
+map('n', '<leader>Pi', ':PackerInstall<CR>', {noremap = true, silent = true})
+map('n', '<leader>Ps', ':PackerStatus<CR>', {noremap = true, silent = true})
+map('n', '<leader>Pu', ':PackerUpdate<CR>', {noremap = true, silent = true})
