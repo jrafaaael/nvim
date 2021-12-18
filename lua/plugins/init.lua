@@ -1,6 +1,7 @@
 require('plugins.plugins')
 
 require('plugins.nvim-tree')
+require('plugins.nvim-autopairs')
 require('plugins.bufferline')
 require('plugins.lualine')
 require('plugins.alpha')

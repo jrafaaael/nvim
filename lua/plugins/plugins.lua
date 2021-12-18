@@ -19,10 +19,12 @@ return require('packer').startup({function()
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'
   }
+
   -- IDE
   use 'lukas-reineke/indent-blankline.nvim'
   use 'ray-x/lsp_signature.nvim'
   use 'tami5/lspsaga.nvim'
+  use 'windwp/nvim-autopairs'
 end, 
 config = {
   display = {
