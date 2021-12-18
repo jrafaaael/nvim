@@ -50,3 +50,15 @@ cmd([[
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
+-- Alpha
+cmd([[
+  autocmd FileType alpha set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
+]])
+-- IndentBlankline
+cmd([[
+  highlight IndentBlanklineChar guifg=#343A45 gui=nocombine
+]])
+-- Help always on the right-side
+vim.api.nvim_command([[
+  autocmd! BufEnter * if &ft ==# 'help' | wincmd L | endif
+]])
