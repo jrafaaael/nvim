@@ -26,6 +26,19 @@ map('v', '<TAB>', '>gv', {noremap = true, silent = false})
 map('v', '<S-TAB>', '<gv', {noremap = true, silent = false})
 map('i', 'jk', '<esc>', {noremap = true, silent = false})
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = false})
+map(
+  'n',
+  '<C-t>',
+  [[v:lua.terminal_behavior()]],
+  {expr = true, noremap = true, silent = true}
+)
+map(
+  't',
+  '<C-t>',
+  [[v:lua.terminal_behavior()]],
+  {expr = true, noremap = true, silent = true}
+)
+
 map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap = true})
 
 map('n', '<leader>/', ':CommentToggle<CR>', {noremap = true})

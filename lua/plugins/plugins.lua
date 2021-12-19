@@ -30,6 +30,7 @@ return require('packer').startup({function()
   use 'windwp/nvim-ts-autotag'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'ahmedkhalf/project.nvim'
+  use 'akinsho/toggleterm.nvim'
 end, 
 config = {
   display = {
