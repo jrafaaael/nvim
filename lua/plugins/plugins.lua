@@ -31,6 +31,7 @@ return require('packer').startup({function()
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'ahmedkhalf/project.nvim'
   use 'akinsho/toggleterm.nvim'
+  use 'tpope/vim-surround'
 end, 
 config = {
   display = {
