@@ -40,6 +40,10 @@ return require('packer').startup({function()
     'jose-elias-alvarez/nvim-lsp-ts-utils',
     requires = 'nvim-lua/plenary.nvim'
   }
+  use {
+    "folke/todo-comments.nvim",
+    requires = 'nvim-lua/plenary.nvim',
+  }
 end, 
 config = {
   display = {
