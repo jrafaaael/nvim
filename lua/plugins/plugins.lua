@@ -32,6 +32,10 @@ return require('packer').startup({function()
   use 'ahmedkhalf/project.nvim'
   use 'akinsho/toggleterm.nvim'
   use 'tpope/vim-surround'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 end, 
 config = {
   display = {

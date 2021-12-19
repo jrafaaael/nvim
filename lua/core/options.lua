@@ -50,6 +50,8 @@ cmd([[
     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
   augroup end
 ]])
+-- Treesitter
+cmd 'set foldexpr=nvim_treesitter#foldexpr()'
 -- Alpha
 cmd([[
   autocmd FileType alpha set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
