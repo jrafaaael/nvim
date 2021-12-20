@@ -76,6 +76,17 @@ map('n', '<leader>R', ':SearchBoxReplace confirm=menu<CR>', {noremap = true, sil
 
 map('n', '<leader>T', ':TroubleToggle<CR>', {noremap = true, silent = true})
 
+map('n', '<leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
+map('n', '<leader>fw', ':Telescope live_grep<CR>', {noremap = true, silent = true})
+map('n', '<leader>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
+map('n', '<leader>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
+map('n', '<leader>fp', ':Telescope projects<CR>', {noremap = true, silent = true})
+map('n', '<leader>fr', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
+map('n', '<leader>ft', ':TodoTelescope<CR>', {noremap = true, silent = true})
+map('n', '<leader>fgs', ':Telescope git_status<CR>', {noremap = true, silent = true})
+map('n', '<leader>fgc', ':Telescope git_commits<CR>', {noremap = true, silent = true})
+map('n', '<leader>fgb', ':Telescope git_branches<CR>', {noremap = true, silent = true})
+
 map('n', '<leader>Pc', ':PackerClean<CR>', {noremap = true, silent = true})
 map('n', '<leader>Pi', ':PackerInstall<CR>', {noremap = true, silent = true})
 map('n', '<leader>Ps', ':PackerStatus<CR>', {noremap = true, silent = true})

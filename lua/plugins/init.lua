@@ -1,5 +1,6 @@
 require('plugins.plugins')
 
+require('plugins.telescope')
 require('plugins.nvim-comment')
 require('plugins.nvim-treesitter')
 require('plugins.nvim-tree')
