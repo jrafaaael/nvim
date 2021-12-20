@@ -48,6 +48,10 @@ return require('packer').startup({function()
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
   }
+  use {
+    'jose-elias-alvarez/null-ls.nvim',
+    requires = 'nvim-lua/plenary.nvim'
+  }
 end, 
 config = {
   display = {
