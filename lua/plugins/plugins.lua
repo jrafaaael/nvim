@@ -66,6 +66,12 @@ return require('packer').startup({function()
   use 'hrsh7th/nvim-cmp'
   use 'neovim/nvim-lspconfig'
 
+  -- Snippets
+  use 'rafamadriz/friendly-snippets'
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
+  use 'dsznajder/vscode-es7-javascript-react-snippets'
+
 end, 
 config = {
   display = {
