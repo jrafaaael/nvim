@@ -38,6 +38,7 @@ opt.timeoutlen = 200
 
 g.completeopt = 'menu,menuone,noselect,noinsert'
 g.mapleader = ' '
+g.onedark_toggle_style_keymap = '<nop>'
 
 -- Colorscheme
 cmd ([[
