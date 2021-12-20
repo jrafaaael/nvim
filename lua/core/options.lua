@@ -43,6 +43,13 @@ g.mapleader = ' '
 cmd ([[
   colorscheme onedark
 ]])
+-- Virtual Text colors
+cmd([[
+  :highlight DiagnosticVirtualTextError guifg=#e86671
+  :highlight DiagnosticVirtualTextWarn guifg=#e5c07b
+  :highlight DiagnosticVirtualTextInfo guifg=#56b6c2
+  :highlight DiagnosticVirtualTextHint guifg=#c678dd
+]])
 -- Packer
 cmd([[
   augroup packer_user_config
@@ -64,3 +71,8 @@ cmd([[
 vim.api.nvim_command([[
   autocmd! BufEnter * if &ft ==# 'help' | wincmd L | endif
 ]])
+
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+end

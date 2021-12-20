@@ -26,6 +26,8 @@ map('v', '<TAB>', '>gv', {noremap = true, silent = false})
 map('v', '<S-TAB>', '<gv', {noremap = true, silent = false})
 map('i', 'jk', '<esc>', {noremap = true, silent = false})
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = false})
+map('n', '<C-f>', '<CMD>lua vim.lsp.buf.formatting_sync()<CR>', {noremap = true, silent = true})
+
 map(
   'n',
   '<C-t>',
@@ -45,6 +47,12 @@ map('n', '<leader>/', ':CommentToggle<CR>', {noremap = true})
 map('v', '<leader>/', ':CommentToggle<CR>', {noremap = true})
 
 map('n', '<leader>;', '<cmd>Alpha<CR>', {noremap = true, silent = true})
+map("n", "<leader>lr", ":Lspsaga lsp_finder<CR>", { noremap = true, silent = true })
+map("n", "<leader>lp", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true })
+map("n", "<leader>.", "<cmd>Lspsaga code_action<CR>", { silent = true })
+map("n", "K", ":Lspsaga hover_doc<CR>", { noremap = true, silent = true })
+map("n", "<leader>ld", "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>", { noremap = true, silent = true })
+map('n', '<F2>', ':Lspsaga rename<CR>', {noremap = true, silent = true})
 
 map('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
 map('n', '<A-l>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
