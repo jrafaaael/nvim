@@ -60,6 +60,9 @@ map('v', '<A-Left>', ':BufferLineMovePrev<CR>', {noremap = true, silent = true})
 for i = 0, 9, 1 do
   map('n', '<A-' .. i .. '>', '<Cmd>BufferLineGoToBuffer' .. i .. '<CR>', {noremap = true, silent = true})
 end
+
+map('n', '<leader>T', ':TroubleToggle<CR>', {noremap = true, silent = true})
+
 map('n', '<leader>Pc', ':PackerClean<CR>', {noremap = true, silent = true})
 map('n', '<leader>Pi', ':PackerInstall<CR>', {noremap = true, silent = true})
 map('n', '<leader>Ps', ':PackerStatus<CR>', {noremap = true, silent = true})
