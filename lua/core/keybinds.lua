@@ -28,6 +28,8 @@ map('i', 'jk', '<esc>', {noremap = true, silent = false})
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = false})
 map('n', '<C-f>', '<CMD>lua vim.lsp.buf.formatting_sync()<CR>', {noremap = true, silent = true})
 
+map('n', '<leader>g', ':LazyGit<CR>', {noremap = true, silent = true})
+
 map(
   'n',
   '<C-t>',

@@ -72,6 +72,8 @@ return require('packer').startup({function()
   use 'hrsh7th/vim-vsnip-integ'
   use 'dsznajder/vscode-es7-javascript-react-snippets'
 
+  -- git
+  use 'kdheepak/lazygit.nvim'
 end, 
 config = {
   display = {
