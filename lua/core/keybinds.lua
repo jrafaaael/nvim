@@ -61,6 +61,9 @@ for i = 0, 9, 1 do
   map('n', '<A-' .. i .. '>', '<Cmd>BufferLineGoToBuffer' .. i .. '<CR>', {noremap = true, silent = true})
 end
 
+map('n', '<leader>S', ':SearchBoxMatchAll clear_matches=true<CR>', {noremap = true, silent = true})
+map('n', '<leader>R', ':SearchBoxReplace confirm=menu<CR>', {noremap = true, silent = true})
+
 map('n', '<leader>T', ':TroubleToggle<CR>', {noremap = true, silent = true})
 
 map('n', '<leader>Pc', ':PackerClean<CR>', {noremap = true, silent = true})

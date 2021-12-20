@@ -52,6 +52,11 @@ return require('packer').startup({function()
     'jose-elias-alvarez/null-ls.nvim',
     requires = 'nvim-lua/plenary.nvim'
   }
+  use {
+    'VonHeikemen/searchbox.nvim',
+    requires = 'MunifTanjim/nui.nvim'
+  }
+
 end, 
 config = {
   display = {
