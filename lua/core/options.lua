@@ -59,6 +59,10 @@ cmd([[
 ]])
 -- Treesitter
 cmd 'set foldexpr=nvim_treesitter#foldexpr()'
+-- Gitsigns
+cmd([[
+  :highlight GitSignsCurrentLineBlame guifg=#4B5263
+]])
 -- Alpha
 cmd([[
   autocmd FileType alpha set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
