@@ -68,6 +68,10 @@ cmd([[
 cmd([[
   autocmd FileType alpha set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
 ]])
+-- Python3
+cmd([[
+  autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+]])
 -- IndentBlankline
 cmd([[
   highlight IndentBlanklineChar guifg=#343A45 gui=nocombine
