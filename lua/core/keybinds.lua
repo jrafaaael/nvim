@@ -49,6 +49,7 @@ map('n', '<leader>/', ':CommentToggle<CR>', {noremap = true})
 map('v', '<leader>/', ':CommentToggle<CR>', {noremap = true})
 
 map('n', '<leader>;', '<cmd>Alpha<CR>', {noremap = true, silent = true})
+
 map("n", "<leader>lr", ":Lspsaga lsp_finder<CR>", { noremap = true, silent = true })
 map("n", "<leader>lp", ":Lspsaga preview_definition<CR>", { noremap = true, silent = true })
 map("n", "<leader>.", "<cmd>Lspsaga code_action<CR>", { silent = true })
@@ -80,7 +81,7 @@ map('n', '<leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = tr
 map('n', '<leader>fw', ':Telescope live_grep<CR>', {noremap = true, silent = true})
 map('n', '<leader>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
 map('n', '<leader>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
-map('n', '<leader>fp', ':Telescope projects<CR>', {noremap = true, silent = true})
+map('n', '<leader>fp', ":lua require('telescope').extensions.projects.projects()<CR>", {noremap = true})
 map('n', '<leader>fr', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
 map('n', '<leader>ft', ':TodoTelescope<CR>', {noremap = true, silent = true})
 map('n', '<leader>fgs', ':Telescope git_status<CR>', {noremap = true, silent = true})
