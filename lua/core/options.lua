@@ -80,6 +80,11 @@ cmd([[
 vim.api.nvim_command([[
   autocmd! BufEnter * if &ft ==# 'help' | wincmd L | endif
 ]])
+-- vim-illuminate
+cmd([[
+  :hi link illuminatedWord Visual
+]])
+
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type

@@ -35,6 +35,7 @@ return require('packer').startup({function()
   use 'akinsho/toggleterm.nvim'
   use 'folke/which-key.nvim'
   use 'tpope/vim-surround'
+  use 'RRethy/vim-illuminate'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
