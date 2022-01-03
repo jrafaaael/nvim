@@ -36,6 +36,7 @@ return require('packer').startup({function()
   use 'folke/which-key.nvim'
   use 'tpope/vim-surround'
   use 'RRethy/vim-illuminate'
+  use 'filipdutescu/renamer.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
