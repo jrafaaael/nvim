@@ -55,7 +55,9 @@ map("n", "<leader>lp", ":Lspsaga preview_definition<CR>", { noremap = true, sile
 map("n", "<leader>.", "<cmd>Lspsaga code_action<CR>", { silent = true })
 map("n", "K", ":Lspsaga hover_doc<CR>", { noremap = true, silent = true })
 map("n", "<leader>ld", "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>", { noremap = true, silent = true })
-map('n', '<F2>', ':Lspsaga rename<CR>', {noremap = true, silent = true})
+-- map('n', '<F2>', ':Lspsaga rename<CR>', {noremap = true, silent = true})
+
+map('n', '<F2>', '<CMD>lua require("renamer").rename()<CR>', {noremap = true, silent = true})
 
 map('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
 map('n', '<A-l>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
