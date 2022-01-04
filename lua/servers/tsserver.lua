@@ -6,6 +6,7 @@ nvim_lsp['tsserver'].setup {
 	-- init_options = require("nvim-lsp-ts-utils").init_options,
     --
     on_attach = function(client, bufnr)
+        require('illuminate').on_attach(client)
         -- disable tsserver formatting if you plan on formatting via null-ls
         client.resolved_capabilities.document_formatting = false
         client.resolved_capabilities.document_range_formatting = false
