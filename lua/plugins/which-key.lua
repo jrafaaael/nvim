@@ -78,11 +78,8 @@ wk.register({
 
 wk.register({
   ['/'] = 'Comment',
-  -- g = {
-  --   name = 'Git',
-  --   r = 'Reset hunk',
-  --   s = 'Stage hunk',
-  -- }
+  S = 'Search selected text',
+  R = 'Replace selected text',
 }, {
   mode = 'v',
   prefix = '<leader>'
