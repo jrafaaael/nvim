@@ -96,3 +96,6 @@ map('n', '<leader>Pc', ':PackerClean<CR>', {noremap = true, silent = true})
 map('n', '<leader>Pi', ':PackerInstall<CR>', {noremap = true, silent = true})
 map('n', '<leader>Ps', ':PackerStatus<CR>', {noremap = true, silent = true})
 map('n', '<leader>Pu', ':PackerUpdate<CR>', {noremap = true, silent = true})
+
+map('n', '<A-n>', '<cmd>lua require("illuminate").next_reference({wrap=true})<CR>', {noremap=true})
+map('n', '<A-p>', '<cmd>lua require("illuminate").next_reference({reverse=true,wrap=true})<CR>', {noremap=true})
