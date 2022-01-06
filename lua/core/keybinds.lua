@@ -1,4 +1,5 @@
 local map = vim.api.nvim_set_keymap
+local cmd = vim.cmd
 
 map('n', '<A-k>', ':m .-2<CR>==', {noremap = true})
 map('n', '<A-j>', ':m .+1<CR>==', {noremap = true})
@@ -99,3 +100,8 @@ map('n', '<leader>Pu', ':PackerUpdate<CR>', {noremap = true, silent = true})
 
 map('n', '<A-n>', '<cmd>lua require("illuminate").next_reference({wrap=true})<CR>', {noremap=true})
 map('n', '<A-p>', '<cmd>lua require("illuminate").next_reference({reverse=true,wrap=true})<CR>', {noremap=true})
+
+cmd([[
+  map <silent> <A-w> <Plug>CamelCaseMotion_w
+  map <silent> <A-b> <Plug>CamelCaseMotion_b
+]])

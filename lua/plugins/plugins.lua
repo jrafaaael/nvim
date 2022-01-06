@@ -37,6 +37,7 @@ return require('packer').startup({function()
   use 'tpope/vim-surround'
   use 'RRethy/vim-illuminate'
   use 'filipdutescu/renamer.nvim'
+  use 'bkad/CamelCaseMotion'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
