@@ -56,17 +56,6 @@ wk.register({
     o = {'Organize imports'},
     i = {'Import all'}
   },
-  -- g = {
-  --   name = 'Git',
-  --   s = 'Stage hunk',
-  --   u = 'Undo stage hunk',
-  --   r = 'Reset hunk',
-  --   R = 'Reset buffer',
-  --   S = 'Stage buffer',
-  --   b = 'Blame line',
-  --   U = 'Reset buffer index',
-  --   g = 'Lazygit'
-  -- },
   P = {
     name = 'Packer',
     c = 'Clean',
