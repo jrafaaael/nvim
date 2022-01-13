@@ -24,7 +24,7 @@ wk.register({
   c = 'Close current buffer',
   e = 'Open explorer',
   v = 'Split right',
-  h = 'Split below',
+  -- h = 'Split below',
   q = 'Quit nvim',
   W = 'Save current buffer and quit nvim',
   g = 'Lazygit',
