@@ -75,10 +75,10 @@ for i = 0, 9, 1 do
   map('n', '<A-' .. i .. '>', '<Cmd>BufferLineGoToBuffer' .. i .. '<CR>', {noremap = true, silent = true})
 end
 
-map('n', '<leader>S', ':SearchBoxMatchAll clear_matches=true<CR>', {noremap = true, silent = true})
-map('v', '<leader>S', 'y:SearchBoxMatchAll -- <C-r>"<CR>', {noremap = true, silent = true})
-map('n', '<leader>R', ':SearchBoxReplace confirm=menu<CR>', {noremap = true, silent = true})
-map('v', '<leader>R', 'y:SearchBoxReplace confirm=menu -- <C-r>"<CR>', {noremap = true, silent = true})
+map('n', '<leader>s', ':SearchBoxMatchAll clear_matches=true<CR>', {noremap = true, silent = true})
+map('v', '<leader>s', 'y:SearchBoxMatchAll -- <C-r>"<CR>', {noremap = true, silent = true})
+map('n', '<leader>r', ':SearchBoxReplace confirm=menu<CR>', {noremap = true, silent = true})
+map('v', '<leader>r', 'y:SearchBoxReplace confirm=menu -- <C-r>"<CR>', {noremap = true, silent = true})
 
 map('n', '<leader>T', ':TroubleToggle<CR>', {noremap = true, silent = true})
 

@@ -21,6 +21,8 @@ wk.register({
   ['/'] = 'Comment',
   -- [';'] = 'Initial screen',
   w = 'Save current buffer',
+  s = 'Search',
+  r = 'Search and replace',
   c = 'Close current buffer',
   e = 'Open explorer',
   v = 'Split right',
