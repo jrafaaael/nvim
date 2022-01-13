@@ -46,10 +46,10 @@ cmd ([[
 ]])
 -- Virtual Text colors
 cmd([[
-  :highlight DiagnosticVirtualTextError guifg=#e86671
-  :highlight DiagnosticVirtualTextWarn guifg=#e5c07b
-  :highlight DiagnosticVirtualTextInfo guifg=#56b6c2
-  :highlight DiagnosticVirtualTextHint guifg=#c678dd
+  :highlight DiagnosticVirtualTextError guifg=#e86671 guibg=none
+  :highlight DiagnosticVirtualTextWarn guifg=#e5c07b guibg=none
+  :highlight DiagnosticVirtualTextInfo guifg=#56b6c2 guibg=none
+  :highlight DiagnosticVirtualTextHint guifg=#c678dd guibg=none
 ]])
 -- Packer
 cmd([[
