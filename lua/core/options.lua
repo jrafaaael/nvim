@@ -81,9 +81,6 @@ vim.api.nvim_command([[
   autocmd! BufEnter * if &ft ==# 'help' | wincmd L | endif
 ]])
 -- vim-illuminate
--- cmd([[
---   :hi link illuminatedWord Visual
--- ]])
 cmd([[
   :hi illuminatedWord cterm=underline gui=underline
 ]])
