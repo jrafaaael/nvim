@@ -93,3 +93,9 @@ for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
+
+vim.cmd([[
+  :hi HopNextKey guifg=#e55561
+  :hi HopNextKey1 guifg=#e55561
+  :hi HopNextKey2 guifg=#e55561
+]])

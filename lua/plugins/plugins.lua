@@ -24,6 +24,7 @@ return require('packer').startup({function()
 
   -- IDE
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'phaazon/hop.nvim'
   use 'ray-x/lsp_signature.nvim'
   use 'tami5/lspsaga.nvim'
   use 'windwp/nvim-autopairs'

@@ -73,6 +73,13 @@ wk.register({
     i = 'Install',
     s = 'Status',
     u = 'Update',
+  },
+  h = {
+    name = 'Hop',
+    w = 'Word',
+    o = 'One char',
+    t = 'Two char',
+    p = 'Pattern'
   }
 }, { prefix = '<leader>' })
 

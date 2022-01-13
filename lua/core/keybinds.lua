@@ -105,3 +105,8 @@ cmd([[
   map <silent> <A-w> <Plug>CamelCaseMotion_w
   map <silent> <A-b> <Plug>CamelCaseMotion_b
 ]])
+
+map('n', '<leader>hw', ':HopWord<CR>', {noremap = true, silent = true})
+map('n', '<leader>ho', ':HopChar1<CR>', {noremap = true, silent = true})
+map('n', '<leader>ht', ':HopChar2<CR>', {noremap = true, silent = true})
+map('n', '<leader>hp', ':HopPattern<CR>', {noremap = true, silent = true})
