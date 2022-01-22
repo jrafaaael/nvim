@@ -40,6 +40,10 @@ return require('packer').startup({function()
   use 'filipdutescu/renamer.nvim'
   use 'bkad/CamelCaseMotion'
   use {
+    'mg979/vim-visual-multi',
+    branch = 'master',
+  }
+  use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
