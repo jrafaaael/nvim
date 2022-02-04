@@ -59,13 +59,13 @@ cmp.setup({
     -- maxwidth = 75,
   },
   sources = cmp.config.sources({
-    { name = 'path'},
+    { name = 'path' },
     { name = 'nvim_lsp' },
     { name = 'vsnip' }, -- For vsnip users.
     -- { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.
-    { name = 'buffer' },
+    -- { name = 'buffer' },
   }),
   formatting = {
     format = lspkind.cmp_format({with_text = true, maxwidth = 50})
