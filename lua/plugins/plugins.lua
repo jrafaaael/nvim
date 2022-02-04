@@ -21,6 +21,7 @@ return require('packer').startup({function()
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'
   }
+  use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- IDE
   use 'lukas-reineke/indent-blankline.nvim'
