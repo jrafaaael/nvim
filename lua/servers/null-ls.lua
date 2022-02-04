@@ -1,25 +1,10 @@
--- local null_ls = require("null-ls")
-
--- null_ls.config({
---   -- you must define at least one source for the plugin to work
---   sources = {
---     null_ls.builtins.formatting.prettier,
---     -- null_ls.builtins.diagnostics.eslint_d
---   }
--- })
-
--- require("lspconfig")["null-ls"].setup({
---   -- see the nvim-lspconfig documentation for available configuration options
---   on_attach = function(client)
---     -- if client.resolved_capabilities.document_formatting then
---     --     vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
---     -- end
---   end
--- })
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 require("null-ls").setup({
+  capabilities = capabilities,
   sources = {
     require("null-ls").builtins.formatting.prettier,
-    -- require("null-ls").builtins.diagnostics.eslint,
+    require("null-ls").builtins.diagnostics.eslint,
   },
 })
