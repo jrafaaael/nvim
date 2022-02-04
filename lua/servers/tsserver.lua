@@ -1,10 +1,13 @@
 local nvim_lsp = require('lspconfig')
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 nvim_lsp['tsserver'].setup {
     -- Only needed for inlayHints. Merge this table with your settings or copy
     -- it from the source if you want to add your own init_options.
-	-- init_options = require("nvim-lsp-ts-utils").init_options,
-    --
+    -- init_options = require("nvim-lsp-ts-utils").init_options,
+ 
+    capabilities = capabilities,
     on_attach = function(client, bufnr)
         require('illuminate').on_attach(client)
         -- disable tsserver formatting if you plan on formatting via null-ls
@@ -30,6 +33,7 @@ nvim_lsp['tsserver'].setup {
             },
             import_all_scan_buffers = 100,
             import_all_select_source = false,
+            always_organize_imports = false,
 
             -- eslint
             eslint_enable_code_actions = true,
@@ -44,8 +48,8 @@ nvim_lsp['tsserver'].setup {
             formatter_opts = {},
 
             -- update imports on file move
-            update_imports_on_move = false,
-            require_confirmation_on_move = false,
+            update_imports_on_move = true,
+            require_confirmation_on_move = true,
             watch_dir = nil,
 
             -- filter diagnostics
@@ -55,6 +59,20 @@ nvim_lsp['tsserver'].setup {
             -- inlay hints
             auto_inlay_hints = true,
             inlay_hints_highlight = "Comment",
+            inlay_hints_priority = 200, -- priority of the hint extmarks
+            inlay_hints_throttle = 150, -- throttle the inlay hint request
+            inlay_hints_format = { -- format options for individual hint kind
+                Type = {},
+                Parameter = {},
+                Enum = {},
+                -- Example format customization for `Type` kind:
+                -- Type = {
+                --     highlight = "Comment",
+                --     text = function(text)
+                --         return "->" .. text:sub(2)
+                --     end,
+                -- },
+            },
         }
 
         -- required to fix code action ranges and filter diagnostics
