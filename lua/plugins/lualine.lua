@@ -1,10 +1,9 @@
-local custom_theme = require'lualine.themes.onedark'
-custom_theme.normal.c.bg = '#212121'
+local lualine = require('lualine')
 
-require'lualine'.setup {
+lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'onedark',
+    theme = 'kanagawa',
     -- component_separators = { left = '', right = ''},
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
@@ -13,25 +12,40 @@ require'lualine'.setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {
+    lualine_b = {'filename'},
+    lualine_c = {
        'branch',
        {
          'diff',
-         diff_color = {added = {fg = '#87BE48'}, removed = {fg = '#ED4135'}},
          symbols = {added = '+', modified = '~', removed = '-'}
        },
-       -- {'diagnostics', sources={'nvim_lsp', 'coc'}}
     },
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_x = {
+      'diagnostics',
+      {
+        sources = {'nvim_diagnostic'},
+        sections = { 'error', 'warn', 'info', 'hint' },
+        diagnostics_color = {
+          -- Same values as the general color option can be used here.
+          error = 'DiagnosticError', -- Changes diagnostics' error color.
+          warn  = 'DiagnosticWarn',  -- Changes diagnostics' warn color.
+          info  = 'DiagnosticInfo',  -- Changes diagnostics' info color.
+          hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
+        },
+        symbols = {error = 'E', warn = 'W', info = 'I', hint = 'H'},
+        colored = true,           -- Displays diagnostics status in color if set to true.
+        update_in_insert = false, -- Update diagnostics in insert mode.
+        always_visible = false,   -- Show diagnostics even if there are none.
+      }
+    },
+    lualine_y = {'lsp_progress'},
     lualine_z = {'location'}
   },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
+    lualine_c = {},
+    lualine_x = {},
     lualine_y = {},
     lualine_z = {}
   },

@@ -1,2 +1,4 @@
-require('nvim-autopairs').setup{}
+require('nvim-autopairs').setup{
+  disable_filetype = {'markdown'}
+}
 

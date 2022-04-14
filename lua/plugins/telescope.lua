@@ -11,20 +11,19 @@ telescope.setup{
     file_ignore_patterns = { '.git/*', 'node_modules', 'env/*' },
     layout_config = {
       prompt_position = 'top',
-      -- width = 0.65,
     },
     prompt_prefix = '',
   },
-  extension = {
-    ["ui-select"] = {
-      require("telescope.themes").get_dropdown {
-      }
-    }
-  }
+  -- extension = {
+  --   ["ui-select"] = {
+  --     require("telescope.themes").get_dropdown {
+  --     }
+  --   }
+  -- }
 }
 
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
 telescope.load_extension('fzf')
-telescope.load_extension('projects')
-telescope.load_extension("ui-select")
+-- telescope.load_extension('projects')
+-- telescope.load_extension("ui-select")

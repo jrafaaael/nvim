@@ -3,6 +3,7 @@ require'colorizer'.setup {
   'typescript';
   'javascriptreact';
   'typescriptreact';
+  'lua';
   css = { rgb_fn = true; };
   html = {
     mode = 'foreground';

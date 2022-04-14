@@ -1,7 +1,1 @@
-require('servers.cssls')
-require('servers.html')
-require('servers.tsserver')
 require('servers.null-ls')
-require('servers.eslint')
-require('servers.pyright')
-require('servers.css_modules')

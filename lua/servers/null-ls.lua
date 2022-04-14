@@ -1,10 +1,12 @@
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local null_ls = require("null-ls")
 
-require("null-ls").setup({
-  capabilities = capabilities,
+null_ls.setup({
   sources = {
-    require("null-ls").builtins.formatting.prettier,
-    require("null-ls").builtins.diagnostics.eslint,
+    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.diagnostics.eslint_d.with({
+        condition = function(utils)
+          return utils.root_has_file({ '.eslintrc.js' })
+        end,
+    }),
   },
 })

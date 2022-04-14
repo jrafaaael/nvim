@@ -1,8 +1,8 @@
-local wk = require('which-key')
+local wk = require("which-key")
 
 wk.setup {
   window = {
-    border = 'none', -- none, single, double, shadow
+    border = 'single', -- none, single, double, shadow
     position = 'bottom', -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 3, 2, 3, 2 }, -- extra window padding [top, right, bottom, left]
@@ -19,42 +19,29 @@ wk.setup {
 wk.register({
   ['.'] = 'Code Action',
   ['/'] = 'Comment',
-  -- [';'] = 'Initial screen',
-  w = 'Save current buffer',
+  w = 'Save changes',
   s = 'Search',
-  r = 'Search and replace',
+  -- r = 'Search and replace',
   c = 'Close current buffer',
   e = 'Open explorer',
   v = 'Split right',
-  -- h = 'Split below',
   q = 'Quit nvim',
-  W = 'Save current buffer and quit nvim',
-  g = 'Lazygit',
-  T = 'Trouble',
   f = {
-    name = 'Find', -- optional group name
-    f = {'Find file'},
-    w = {'Find word'},
-    b = {'Find buffer'},
-    h = {'Find help tags'},
-    p = {'Find projects'},
-    r = {'Find recent opened files'},
-    t = {'Find todo comments'},
-    g = {
-      name = 'Git',
-      s = {'Status'},
-      c = {'Commits'},
-      b = {'Branches'},
-    }
+    name = 'Find',
+    f = 'File',
+    w = 'Word',
+    b = 'Buffer',
+    h = 'Help tags',
+    -- p = 'Find projects',
+    r = 'Recent files',
+    R = 'Registers',
+    -- t = 'Find todo comments',
   },
   l = {
     name = 'LSP',
-    r = {'References'},
-    p = {'Preview definition'},
-    R = {'Rename file'},
-    d = {'Diagnostics'},
-    o = {'Organize imports'},
-    i = {'Import all'}
+    o = 'Organize imports',
+    R = 'Rename file',
+    i = 'Import all',
   },
   P = {
     name = 'Packer',
@@ -63,19 +50,36 @@ wk.register({
     s = 'Status',
     u = 'Update',
   },
-  h = {
-    name = 'Hop',
-    w = 'Word',
-    o = 'One char',
-    t = 'Two char',
-    p = 'Pattern'
-  }
+  g = {
+    name = 'Git',
+    d = 'Preview diff',
+    B = 'See blame info',
+    g = 'LazyGit',
+    s = 'Status',
+    c = 'Commits',
+    b = 'Branches',
+    h = {
+      name = 'Hunk',
+      s = 'Stage hunk',
+      u = 'Undo stage hunk',
+      p = 'Preview hunk'
+    }
+  },
+  r = {
+    name = 'Replace',
+    l = 'Replace in current file',
+    g = 'Replace in current folder'
+  },
 }, { prefix = '<leader>' })
 
 wk.register({
   ['/'] = 'Comment',
-  S = 'Search selected text',
-  R = 'Replace selected text',
+  s = 'Search selected text',
+  r = {
+    name = 'Replace',
+    g = 'Replace text in current folder',
+    l = 'Replace text in current file',
+  },
 }, {
   mode = 'v',
   prefix = '<leader>'
@@ -83,5 +87,12 @@ wk.register({
 
 wk.register({
   b = 'Go to buffer',
-  d = 'Go to definition'
+  d = 'Go to definition',
+  D = 'Go to declaration',
 }, {prefix = 'g'})
+
+wk.register({
+  r = 'Replace',
+  d = 'Delete',
+  a = 'Add',
+}, {prefix = 's'})

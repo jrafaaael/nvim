@@ -1,25 +1,32 @@
 require('plugins.plugins')
 
-require('plugins.telescope')
-require('plugins.nvim-comment')
-require('plugins.nvim-treesitter')
-require('plugins.nvim-tree')
-require('plugins.cmp')
-require('plugins.nvim-autopairs')
-require('plugins.nvim-ts-autotag')
+-- UI
+require('plugins.kanagawa')
+require('plugins.feline')
 require('plugins.bufferline')
-require('plugins.lualine')
+
+-- LSP
+require('plugins.lsp')
+require('plugins.cmp')
+
+-- IDE
+require('plugins.nvim-tree')
 require('plugins.toggleterm')
-require('plugins.alpha')
-require('plugins.project')
+require('plugins.nvim-treesitter')
 require('plugins.indent-blankline')
+require('plugins.nvim-autopairs')
 require('plugins.nvim-colorizer')
-require('plugins.lspsaga')
-require('plugins.which-key')
-require('plugins.gitsigns')
-require('plugins.todo-comments')
+require('plugins.nvim-ts-autotag')
+require('plugins.nvim-comment')
 require('plugins.trouble')
-require('plugins.lsp-signature')
-require('plugins.renamer')
+require('plugins.spectre')
+
+-- git
+require('plugins.gitsigns')
+
+-- Fuzzy finder
+require('plugins.telescope')
+
+-- Misc
 require('plugins.hop')
-require('plugins.VM')
+require('plugins.which-key')
