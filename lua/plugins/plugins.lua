@@ -51,7 +51,7 @@ return require('packer').startup({function()
   }
 
   -- Language specific
-  use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+  use 'jose-elias-alvarez/typescript.nvim'
 
   -- git
   use 'lewis6991/gitsigns.nvim'
