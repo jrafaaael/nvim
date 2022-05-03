@@ -20,7 +20,6 @@ wk.register({
   ['.'] = 'Code Action',
   ['/'] = 'Comment',
   w = 'Save changes',
-  s = 'Search',
   -- r = 'Search and replace',
   c = 'Close current buffer',
   e = 'Open explorer',
@@ -65,6 +64,11 @@ wk.register({
       p = 'Preview hunk'
     }
   },
+  s = {
+    name = 'Search',
+    g = 'Search in current folder',
+    l = 'Search in current file',
+  },
   r = {
     name = 'Replace',
     l = 'Replace in current file',
@@ -74,7 +78,11 @@ wk.register({
 
 wk.register({
   ['/'] = 'Comment',
-  s = 'Search selected text',
+  s = {
+    name = 'Search',
+    g = 'Search text in current folder',
+    l = 'Search text in current file',
+  },
   r = {
     name = 'Replace',
     g = 'Replace text in current folder',

@@ -46,23 +46,23 @@ map(
 
 map('n', '<leader>rg', ":lua require('spectre').open()<CR>", {noremap = true, silent = true})
 map('v', '<leader>rg', ":lua require('spectre').open_visual()<CR>", {noremap = true, silent = true})
-
-map('n', '<leader>s', ':SearchBoxMatchAll clear_matches=true<CR>', {noremap = true, silent = true})
-map('v', '<leader>s', 'y:SearchBoxMatchAll -- <C-r>"<CR>', {noremap = true, silent = true})
 map('n', '<leader>rl', ':SearchBoxReplace confirm=menu<CR>', {noremap = true, silent = true})
 map('v', '<leader>rl', 'y:SearchBoxReplace confirm=menu -- <C-r>"<CR>', {noremap = true, silent = true})
+
+map('n', '<leader>sl', ':SearchBoxMatchAll clear_matches=true<CR>', {noremap = true, silent = true})
+map('v', '<leader>sl', 'y:SearchBoxMatchAll -- <C-r>"<CR>', {noremap = true, silent = true})
+map('v', '<leader>sg', ([["zy<cmd>exec 'Telescope grep_string default_text=' . escape(@z, ' ')<cr>]]), {noremap = true, silent = true})
+map('n', '<leader>sg', ':Telescope live_grep<CR>', {noremap = true, silent = true})
 
 map('n', 'm', ':HopWord<CR>', {noremap = true, silent = true})
 map('n', 'M', ':HopChar1<CR>', {noremap = true, silent = true})
 
 map('n', '<leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
-map('n', '<leader>fw', ':Telescope live_grep<CR>', {noremap = true, silent = true})
 map('n', '<leader>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
 map('n', '<leader>fh', ':Telescope help_tags<CR>', {noremap = true, silent = true})
 map('n', '<leader>fR', ':Telescope registers<CR>', {noremap = true, silent = true})
 -- map('n', '<leader>fp', ":lua require('telescope').extensions.projects.projects()<CR>", {noremap = true})
 map('n', '<leader>fr', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
-map('v', '<leader>S', ([["zy<cmd>exec 'Telescope grep_string default_text=' . escape(@z, ' ')<cr>]]), {noremap = true, silent = true})
 -- map('n', '<leader>ft', ':TodoTelescope<CR>', {noremap = true, silent = true})
 
 map('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
