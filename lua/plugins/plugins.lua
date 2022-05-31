@@ -8,7 +8,10 @@ return require('packer').startup({function()
   use 'rebelot/kanagawa.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'feline-nvim/feline.nvim'
-  use 'akinsho/bufferline.nvim'
+  use {
+    'akinsho/bufferline.nvim',
+    tag = "v2.*"
+  }
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -29,7 +32,6 @@ return require('packer').startup({function()
 
   -- IDE
   use 'kyazdani42/nvim-tree.lua'
-  use 'akinsho/toggleterm.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'windwp/nvim-autopairs'
   use 'norcalli/nvim-colorizer.lua'
@@ -41,6 +43,10 @@ return require('packer').startup({function()
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'folke/trouble.nvim'
   use 'nvim-pack/nvim-spectre'
+  use {
+    'akinsho/toggleterm.nvim',
+    -- tag = 'v1.*'
+  }
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'

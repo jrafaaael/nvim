@@ -11,14 +11,14 @@ end
 
 cmp.setup({
   snippet = {
-    -- REQUIRED - you must specify a snippet engine
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-      -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-      -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-    end,
-  },
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+      end,
+    },
   mapping = {
     -- ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
     -- ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -43,7 +43,6 @@ cmp.setup({
         fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
       end
     end, { "i", "s" }),
-
     ["<S-Tab>"] = cmp.mapping(function()
       if cmp.visible() then
         cmp.select_prev_item()
@@ -53,20 +52,23 @@ cmp.setup({
     end, { "i", "s" }),
   },
   window = {
-    documentation = {
-      border = 'rounded',
-      winhighlight = 'FloatBorder:FloatBorder,Normal:Normal',
-    },
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+    -- documentation = {
+    --   border = 'rounded',
+    --   winhighlight = 'FloatBorder:FloatBorder,Normal:Normal',
+    -- },
   },
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' }, -- For vsnip users.
-    -- { name = 'luasnip' }, -- For luasnip users.
-    -- { name = 'ultisnips' }, -- For ultisnips users.
-    -- { name = 'snippy' }, -- For snippy users.
-    { name = 'buffer' },
-    { name = 'path' },
-  }),
+      { name = 'nvim_lsp' },
+      { name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'ultisnips' }, -- For ultisnips users.
+      -- { name = 'snippy' }, -- For snippy users.
+    }, {
+      { name = 'buffer' },
+      { name = 'path' }
+    }),
 })
 
 -- Set configuration for specific filetype.

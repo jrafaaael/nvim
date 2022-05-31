@@ -2,10 +2,11 @@
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
 local lsp_installer = require("nvim-lsp-installer")
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
 local servers = { "sumneko_lua", "html", "cssls", "cssmodules_ls", "jsonls", "pyright", "tailwindcss", "vimls" }
 
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+-- capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- vim.api.nvim_set_keymap('n', '<space>d', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
