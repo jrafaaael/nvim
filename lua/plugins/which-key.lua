@@ -28,7 +28,8 @@ wk.register({
   f = {
     name = 'Find',
     f = 'File',
-    w = 'Word',
+    l = 'Text in current file',
+    g = 'Text in current project',
     b = 'Buffer',
     h = 'Help tags',
     -- p = 'Find projects',
@@ -36,12 +37,12 @@ wk.register({
     R = 'Registers',
     -- t = 'Find todo comments',
   },
-  l = {
-    name = 'LSP',
-    o = 'Organize imports',
-    R = 'Rename file',
-    i = 'Import all',
-  },
+  -- l = {
+  --   name = 'LSP',
+  --   o = 'Organize imports',
+  --   R = 'Rename file',
+  --   i = 'Import all',
+  -- },
   P = {
     name = 'Packer',
     c = 'Clean',
@@ -64,28 +65,23 @@ wk.register({
       p = 'Preview hunk'
     }
   },
-  s = {
-    name = 'Search',
-    g = 'Search in current folder',
-    l = 'Search in current file',
-  },
   r = {
     name = 'Replace',
-    l = 'Replace in current file',
-    g = 'Replace in current folder'
+    l = 'Replace text in current file',
+    g = 'Replace text in current folder'
   },
 }, { prefix = '<leader>' })
 
 wk.register({
   ['/'] = 'Comment',
-  s = {
-    name = 'Search',
-    g = 'Search text in current folder',
-    l = 'Search text in current file',
+  f = {
+    name = 'Find',
+    g = 'Find text in current project',
+    l = 'Find text in current file',
   },
   r = {
     name = 'Replace',
-    g = 'Replace text in current folder',
+    g = 'Replace text in current project',
     l = 'Replace text in current file',
   },
 }, {
@@ -104,3 +100,7 @@ wk.register({
   d = 'Delete',
   a = 'Add',
 }, {prefix = 's'})
+
+wk.register({
+  t = 'Open Trouble'
+}, {prefix = 't'})

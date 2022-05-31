@@ -49,11 +49,6 @@ map('v', '<leader>rg', ":lua require('spectre').open_visual()<CR>", {noremap = t
 map('n', '<leader>rl', ':SearchBoxReplace confirm=menu<CR>', {noremap = true, silent = true})
 map('v', '<leader>rl', 'y:SearchBoxReplace confirm=menu -- <C-r>"<CR>', {noremap = true, silent = true})
 
-map('n', '<leader>sl', ':SearchBoxMatchAll clear_matches=true<CR>', {noremap = true, silent = true})
-map('v', '<leader>sl', 'y:SearchBoxMatchAll -- <C-r>"<CR>', {noremap = true, silent = true})
-map('v', '<leader>sg', ([["zy<cmd>exec 'Telescope grep_string default_text=' . escape(@z, ' ')<cr>]]), {noremap = true, silent = true})
-map('n', '<leader>sg', ':Telescope live_grep<CR>', {noremap = true, silent = true})
-
 map('n', 'm', ':HopWord<CR>', {noremap = true, silent = true})
 map('n', 'M', ':HopChar1<CR>', {noremap = true, silent = true})
 
@@ -64,6 +59,11 @@ map('n', '<leader>fR', ':Telescope registers<CR>', {noremap = true, silent = tru
 -- map('n', '<leader>fp', ":lua require('telescope').extensions.projects.projects()<CR>", {noremap = true})
 map('n', '<leader>fr', ':Telescope oldfiles<CR>', {noremap = true, silent = true})
 -- map('n', '<leader>ft', ':TodoTelescope<CR>', {noremap = true, silent = true})
+map('n', '<leader>fl', ':SearchBoxMatchAll clear_matches=true<CR>', {noremap = true, silent = true})
+map('v', '<leader>fl', 'y:SearchBoxMatchAll -- <C-r>"<CR>', {noremap = true, silent = true})
+map('n', '<leader>fg', ':Telescope live_grep<CR>', {noremap = true, silent = true})
+map('v', '<leader>fg', ([["zy<cmd>exec 'Telescope grep_string default_text=' . escape(@z, ' ')<cr>]]), {noremap = true, silent = true})
+
 
 map('n', 'gb', ':BufferLinePick<CR>', {noremap = true, silent = true})
 map('n', '<A-l>', ':BufferLineCycleNext<CR>', {noremap = true, silent = true})
