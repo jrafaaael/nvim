@@ -8,6 +8,7 @@ return require('packer').startup({function()
   use 'navarasu/onedark.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'feline-nvim/feline.nvim'
+  use 'zbirenbaum/neodim'
   use {
     'akinsho/bufferline.nvim',
     tag = "v2.*"
