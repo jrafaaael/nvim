@@ -41,6 +41,7 @@ opt.sidescrolloff = 10
 opt.list = true
 opt.timeoutlen = 300
 opt.pumheight = 10
+opt.signcolumn = 'yes'
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
