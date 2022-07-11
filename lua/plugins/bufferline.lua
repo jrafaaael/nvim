@@ -59,15 +59,16 @@ bufferline.setup {
         return true
       end
     end,
-    -- offsets = {{filetype = "NvimTree", text = "File Explorer" | function , text_align = "left" | "center" | "right"}},
     offsets = {
       {
         filetype = "NvimTree",
         text = function()
-          return vim.fn.getcwd()
+          local dir = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+          return dir
+          -- return vim.fn.getcwd()
         end,
         highlight = "Directory",
-        text_align = "left"
+        text_align = "center",
       }
     },
     show_buffer_icons = true, -- disable filetype icons for buffers
