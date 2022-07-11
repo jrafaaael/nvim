@@ -5,6 +5,7 @@ return require('packer').startup({function()
   use 'nvim-lua/plenary.nvim'
 
   -- UI
+  use 'navarasu/onedark.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'feline-nvim/feline.nvim'
   use {

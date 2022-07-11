@@ -1,6 +1,7 @@
 require('plugins.plugins')
 
 -- UI
+require('plugins.onedark')
 require('plugins.feline')
 require('plugins.bufferline')
 
