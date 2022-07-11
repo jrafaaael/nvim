@@ -1,5 +1,4 @@
 local vi_mode_utils = require 'feline.providers.vi_mode'
-local kanagawa_colors = require("kanagawa.colors").setup()
 local colors = {
   bg = '#2c323c',
   fg = 'NONE',
@@ -59,14 +58,14 @@ local diagnostics_colors = {
 local components = {
   vimode = {
     provider = function()
-      local current_text = ' '..vi_mode_text[vim.fn.mode()]..' '
+      local current_text = ' ' .. vi_mode_text[vim.fn.mode()] .. ' '
       return current_text
     end,
     hl = function()
       local val = {
         name = vi_mode_utils.get_mode_highlight_name(),
         fg = colors.bg,
-        bg = vi_mode_colors[vi_mode_text[vim.fn.mode()]],
+        bg = vi_mode_colors[ vi_mode_text[vim.fn.mode()] ],
         -- bg = vi_mode_utils.get_mode_color(),
         style = 'bold'
       }
@@ -77,20 +76,13 @@ local components = {
     provider = 'file_info',
     hl = {
       fg = colors.blue,
-      bg = kanagawa_colors.winterBlue,
       style = 'bold'
     },
     left_sep = {
       str = ' ',
-      hl = {
-        bg = kanagawa_colors.winterBlue,
-      }
     },
     right_sep = {
       str = ' ',
-      hl = {
-        bg = kanagawa_colors.winterBlue,
-      }
     },
   },
   git = {
@@ -98,8 +90,6 @@ local components = {
       provider = 'git_branch',
       icon = ' ',
       hl = {
-        fg = kanagawa_colors.fujiWhite,
-        bg = kanagawa_colors.winterBlue,
         style = 'bold'
       },
     },
@@ -107,20 +97,17 @@ local components = {
       provider = 'git_diff_added',
       hl = {
         fg = colors.green,
-        bg = kanagawa_colors.winterBlue,
       },
     },
     change = {
       provider = 'git_diff_changed',
       hl = {
         fg = colors.orange,
-        bg = kanagawa_colors.winterBlue,
       },
     },
     remove = {
       provider = 'git_diff_removed',
       hl = {
-        bg = kanagawa_colors.winterBlue,
         fg = colors.red
       },
     }
@@ -130,7 +117,7 @@ local components = {
       -- provider = 'diagnostic_errors',
       provider = function()
         local count = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
-        return (count > 0) and ' '..count..' ' or ''
+        return (count > 0) and ' ' .. count .. ' ' or ''
       end,
       hl = {
         bg = diagnostics_colors.error,
@@ -141,7 +128,6 @@ local components = {
         str = 'left_filled',
         always_visible = true,
         hl = {
-          bg = kanagawa_colors.winterBlue,
           fg = diagnostics_colors.error
         }
       }
@@ -150,7 +136,7 @@ local components = {
       -- provider = 'diagnostic_warnings',
       provider = function()
         local count = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
-        return (count > 0) and ' '..count..' ' or ''
+        return (count > 0) and ' ' .. count .. ' ' or ''
       end,
       hl = {
         bg = diagnostics_colors.warn,
@@ -170,7 +156,7 @@ local components = {
       -- provider = 'diagnostic_hints',
       provider = function()
         local count = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
-        return (count > 0) and ' '..count..' ' or ''
+        return (count > 0) and ' ' .. count .. ' ' or ''
       end,
       hl = {
         bg = diagnostics_colors.hint,
@@ -190,7 +176,7 @@ local components = {
       -- provider = 'diagnostic_info',
       provider = function()
         local count = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.INFO })
-        return (count > 0) and ' '..count..' ' or ''
+        return (count > 0) and ' ' .. count .. ' ' or ''
       end,
       hl = {
         bg = diagnostics_colors.info,
@@ -210,13 +196,11 @@ local components = {
   lsp_clients = {
     provider = 'lsp_client_names',
     hl = {
-      bg = kanagawa_colors.winterBlue,
       style = 'bold'
     },
     right_sep = {
       str = ' ',
       hl = {
-        bg = kanagawa_colors.winterBlue,
       }
     },
   },
@@ -228,15 +212,9 @@ local components = {
     },
     left_sep = {
       str = ' ',
-      hl = {
-        bg = kanagawa_colors.winterBlue,
-      }
     },
     right_sep = {
       str = ' ',
-      hl = {
-        bg = kanagawa_colors.winterBlue,
-      }
     }
   },
 }
@@ -250,9 +228,6 @@ local active = {
     components.git.change,
     components.git.remove,
     {
-      hl = {
-        bg = kanagawa_colors.winterBlue,
-      },
       left_sep = ' '
     }
   },
@@ -271,7 +246,7 @@ local active = {
         always_visible = true,
         hl = {
           bg = diagnostics_colors.info,
-          fg = kanagawa_colors.winterBlue
+          fg = '#1F1F23'
         }
       }
     },

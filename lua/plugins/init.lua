@@ -1,7 +1,6 @@
 require('plugins.plugins')
 
 -- UI
-require('plugins.kanagawa')
 require('plugins.feline')
 require('plugins.bufferline')
 

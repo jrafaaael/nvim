@@ -1,5 +1,4 @@
 local bufferline = require('bufferline')
-local kanagawa_colors = require("kanagawa.colors").setup()
 
 bufferline.setup {
   options = {
@@ -88,31 +87,4 @@ bufferline.setup {
     -- end
     sort_by = 'insert_after_current',
   },
-  highlights = {
-    fill = {
-      guibg = kanagawa_colors.sumiInk2,
-    },
-    indicator_selected = {
-      guifg = kanagawa_colors.crystalBlue
-    },
-    modified = {
-      guifg = kanagawa_colors.fujiWhite,
-      -- guibg = '<color-value-here>'
-    },
-    modified_visible = {
-      guifg = kanagawa_colors.fujiWhite,
-      -- guibg = '<color-value-here>'
-    },
-    modified_selected = {
-      guifg = kanagawa_colors.fujiWhite,
-      -- guibg = '<color-value-here>'
-    },
-    separator = {
-      -- guifg = '<color-value-here>',
-      guibg = kanagawa_colors.sumiInk2
-    },
-    -- buffer_selected = {
-    --   guibg = kanagawa_colors.sumiInk2
-    -- }
-  }
 }
