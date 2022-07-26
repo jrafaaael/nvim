@@ -9,6 +9,7 @@ return require('packer').startup({function()
   use 'kyazdani42/nvim-web-devicons'
   use 'feline-nvim/feline.nvim'
   use 'zbirenbaum/neodim'
+  use 'onsails/lspkind.nvim'
   use {
     'akinsho/bufferline.nvim',
     tag = "v2.*"
