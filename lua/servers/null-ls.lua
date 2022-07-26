@@ -6,7 +6,6 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.prettierd.with({
       condition = function(utils)
-        print(vim.inspect('prettier'))
         return utils.root_has_file({ '.prettierrc', ".prettierrc.json" })
       end
     }),
