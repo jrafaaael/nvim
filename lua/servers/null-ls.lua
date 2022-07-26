@@ -15,6 +15,12 @@ null_ls.setup({
         return utils.root_has_file({ '.eslintrc.js', ".eslintrc.json" })
       end,
     }),
+    null_ls.builtins.formatting.eslint_d.with({
+      condition = function(utils)
+        return utils.root_has_file({ '.eslintrc.js', ".eslintrc.json" }) and
+            not utils.root_has_file({ '.prettierrc', ".prettierrc.json" })
+      end
+    }),
     null_ls.builtins.diagnostics.flake8,
     null_ls.builtins.formatting.black
   },
