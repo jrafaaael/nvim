@@ -6,13 +6,14 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.prettierd.with({
       condition = function(utils)
-          return utils.root_has_file({ '.prettierd.js' })
-        end
+        print(vim.inspect('prettier'))
+        return utils.root_has_file({ '.prettierrc', ".prettierrc.json" })
+      end
     }),
     null_ls.builtins.diagnostics.eslint_d.with({
-        condition = function(utils)
-          return utils.root_has_file({ '.eslintrc.js' })
-        end,
+      condition = function(utils)
+        return utils.root_has_file({ '.eslintrc.js', ".eslintrc.json" })
+      end,
     }),
     null_ls.builtins.diagnostics.flake8,
     null_ls.builtins.formatting.black
