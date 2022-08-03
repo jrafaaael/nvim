@@ -41,11 +41,12 @@ nvim_tree.setup {
   },
   filters = {
     dotfiles = false,
-    custom = { '.git', '.cache' }
+    custom = { '.git' },
+    exclude = { '.gitignore' }
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 400,
   },
   view = {
