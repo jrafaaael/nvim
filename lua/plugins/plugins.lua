@@ -15,6 +15,10 @@ return require('packer').startup({function()
     'akinsho/bufferline.nvim',
     tag = "v2.*"
   }
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+  })
 
   -- LSP
   use 'neovim/nvim-lspconfig'

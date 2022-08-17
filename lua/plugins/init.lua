@@ -5,6 +5,7 @@ require('plugins.onedark')
 require('plugins.feline')
 require('plugins.bufferline')
 require('plugins.neodim')
+require('plugins.lspsaga')
 
 -- LSP
 require('plugins.lsp')
