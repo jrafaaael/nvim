@@ -70,6 +70,12 @@ wk.register({
     l = 'Replace text in current file',
     g = 'Replace text in current folder'
   },
+  d = {
+    name = 'DAP',
+    b = 'Toggle breakpoint',
+    c = 'Continue',
+    t = 'Terminate',
+  }
 }, { prefix = '<leader>' })
 
 wk.register({

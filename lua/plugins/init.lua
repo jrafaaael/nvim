@@ -21,6 +21,7 @@ require('plugins.nvim-ts-autotag')
 require('plugins.nvim-comment')
 require('plugins.trouble')
 require('plugins.spectre')
+require('plugins.dap')
 
 -- git
 require('plugins.gitsigns')

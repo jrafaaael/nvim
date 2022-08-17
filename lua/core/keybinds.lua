@@ -28,6 +28,10 @@ map('i', 'jk', '<esc>', {noremap = true})
 
 map('n', '<leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 
+map('n', '<leader>db', ':DapToggleBreakpoint<CR>', {noremap = true, silent = true})
+map('n', '<leader>dc', ':DapContinue<CR>', {noremap = true, silent = true})
+map('n', '<leader>dt', ':DapTerminate<CR>', {noremap = true, silent = true})
+
 map('n', '<leader>/', ':CommentToggle<CR>', {noremap = true})
 map('v', '<leader>/', ':CommentToggle<CR>', {noremap = true})
 

@@ -8,6 +8,7 @@ return require('packer').startup({function()
   use 'navarasu/onedark.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'feline-nvim/feline.nvim'
+  use 'rcarriga/nvim-dap-ui'
   use 'zbirenbaum/neodim'
   use 'onsails/lspkind.nvim'
   use {
@@ -45,6 +46,7 @@ return require('packer').startup({function()
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'folke/trouble.nvim'
   use 'nvim-pack/nvim-spectre'
+  use 'mfussenegger/nvim-dap'
   use {
     'akinsho/toggleterm.nvim',
     -- tag = 'v1.*'
@@ -60,6 +62,7 @@ return require('packer').startup({function()
 
   -- Language specific
   use 'jose-elias-alvarez/typescript.nvim'
+  use 'mfussenegger/nvim-dap-python'
 
   -- git
   use 'lewis6991/gitsigns.nvim'
