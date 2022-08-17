@@ -1,4 +1,5 @@
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
+local lsp = vim.lsp
 
 local mappings = function(bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -24,10 +25,25 @@ local mappings = function(bufnr)
 end
 
 _G.on_attach = function(client, bufnr)
-  require"lsp_signature".on_attach({
+  require "lsp_signature".on_attach({
     hint_enable = false,
-  })  -- Note: add in lsp client on-attach
+  }) -- Note: add in lsp client on-attach
 
   -- Mappings.
   mappings(bufnr)
 end
+
+lsp.handlers["textDocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
+  border = "rounded",
+})
+
+lsp.handlers["textDocument/signatureHelp"] = lsp.with(vim.lsp.handlers.signature_help, {
+  border = "rounded",
+})
+
+vim.diagnostic.config({
+  float = {
+    source = 'always',
+    border = 'rounded',
+  },
+})
