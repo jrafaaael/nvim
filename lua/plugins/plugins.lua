@@ -83,6 +83,7 @@ return require('packer').startup({function()
   use 'phaazon/hop.nvim'
   use 'folke/which-key.nvim'
   use 'ellisonleao/glow.nvim'
+  use 'mbbill/undotree'
 end,
 config = {
   display = {

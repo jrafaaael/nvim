@@ -100,3 +100,5 @@ map('n', '<leader>gc', ':Telescope git_commits<CR>', {noremap = true, silent = t
 map('n', '<leader>gb', ':Telescope git_branches<CR>', {noremap = true, silent = true})
 
 map('n', 'tt', ':TroubleToggle<CR>', {noremap = true, silent = true})
+
+map('n', 'fh', ':UndotreeToggle<CR>', {noremap = true, silent = true})

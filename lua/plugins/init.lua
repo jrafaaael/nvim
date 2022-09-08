@@ -33,3 +33,4 @@ require('plugins.telescope')
 -- Misc
 require('plugins.hop')
 require('plugins.which-key')
+require('plugins.undotree')
