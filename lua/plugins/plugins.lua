@@ -41,7 +41,7 @@ return require('packer').startup({function()
   use 'kyazdani42/nvim-tree.lua'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'windwp/nvim-autopairs'
-  use 'norcalli/nvim-colorizer.lua'
+  use 'NvChad/nvim-colorizer.lua'
   use 'windwp/nvim-ts-autotag'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'terrortylor/nvim-comment'
