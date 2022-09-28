@@ -1,8 +1,9 @@
 local cmd = vim.cmd
 
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = {'typescript', 'javascript', 'tsx', 'vue', 'css', 'html', 'go', 'json', 'lua', 'vim', 'python', 'markdown'},
+  ensure_installed = { 'typescript', 'javascript', 'tsx', 'vue', 'css', 'html', 'go', 'json', 'lua', 'vim', 'python',
+    'markdown', 'prisma', 'yaml', 'astro' },
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -38,7 +39,7 @@ require'nvim-treesitter.configs'.setup {
   context_commentstring = {
     enable = true,
     enable_autocmd = false,
-  }
+  },
 }
 
-cmd'set foldexpr=nvim_treesitter#foldexpr()'
+cmd 'set foldexpr=nvim_treesitter#foldexpr()'

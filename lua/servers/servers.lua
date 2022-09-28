@@ -1,4 +1,4 @@
-local SERVERS = {
+vim.g.SERVERS = {
   cssls = {},
   cssmodules_ls = {},
   html = {},
@@ -88,6 +88,17 @@ local SERVERS = {
     },
   },
   tailwindcss = {},
+  prismals = {},
+  yamlls = {
+    settings = {
+      yaml = {
+        schemas = {
+          ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*"
+        },
+      },
+    }
+  },
+  astro = {}
 }
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
