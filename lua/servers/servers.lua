@@ -98,18 +98,7 @@ vim.g.SERVERS = {
       },
     }
   },
-  astro = {}
+  astro = {},
+  tsserver = {},
+  svelte = {},
 }
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-require('cmp_nvim_lsp').update_capabilities(capabilities)
-
-require('nvim-lsp-installer').setup({
-  ensure_installed = SERVERS
-})
-
-for server, config in pairs(SERVERS) do
-  require('lspconfig')[server].setup(
-    vim.tbl_deep_extend("force", { capabilities = capabilities, on_attach = on_attach }, config)
-  )
-end
