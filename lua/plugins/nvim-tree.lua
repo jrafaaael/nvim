@@ -12,7 +12,7 @@ nvim_tree.setup {
   open_on_setup        = false,
   open_on_setup_file = false,
   open_on_tab          = false,
-  update_cwd           = true,
+  sync_root_with_cwd           = true,
   reload_on_bufenter = true,
   respect_buf_cwd = false,
   ignore_ft_on_setup   = {},
@@ -32,7 +32,7 @@ nvim_tree.setup {
   },
   update_focused_file = {
     enable      = true,
-    update_cwd  = true,
+    update_root  = true,
     ignore_list = {}
   },
   system_open = {
@@ -41,7 +41,7 @@ nvim_tree.setup {
   },
   filters = {
     dotfiles = false,
-    custom = { '.git' },
+    custom = { '^.git$' },
     exclude = { '.gitignore' }
   },
   git = {
@@ -51,8 +51,7 @@ nvim_tree.setup {
   },
   view = {
     width = 35,
-    height = 30,
-    hide_root_folder = false,
+    hide_root_folder = true,
     side = 'left',
     preserve_window_proportions = false,
     number = true,
