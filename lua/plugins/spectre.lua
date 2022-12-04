@@ -1,6 +1,8 @@
+local cmd = vim.cmd
+
 require('spectre').setup({
   mapping = {
-  ['enter_file'] = {
+    ['enter_file'] = {
       map = "<TAB>",
       cmd = "<cmd>lua require('spectre.actions').select_entry()<CR>",
       desc = "goto current file"
@@ -12,3 +14,7 @@ require('spectre').setup({
     },
   }
 })
+
+cmd([[
+  autocmd FileType spectre_panel nnoremap <buffer> <esc> :q!<CR>
+]])
