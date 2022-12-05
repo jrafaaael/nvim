@@ -53,8 +53,8 @@ map('v', '<leader>rg', ":lua require('spectre').open_visual()<CR>", {noremap = t
 map('n', '<leader>rl', ':SearchBoxReplace confirm=menu<CR>', {noremap = true, silent = true})
 map('v', '<leader>rl', 'y:SearchBoxReplace confirm=menu -- <C-r>"<CR>', {noremap = true, silent = true})
 
-map('n', 'm', ':HopWord<CR>', {noremap = true, silent = true})
-map('n', 'M', ':HopChar1<CR>', {noremap = true, silent = true})
+map('', 'm', '<cmd>:HopWord<CR>', {noremap = true, silent = true})
+map('', 'M', '<cmd>:HopChar1<CR>', {noremap = true, silent = true})
 
 map('n', '<leader>ff', ':Telescope find_files<CR>', {noremap = true, silent = true})
 map('n', '<leader>fb', ':Telescope buffers<CR>', {noremap = true, silent = true})
