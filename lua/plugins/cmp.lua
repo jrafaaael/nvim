@@ -50,10 +50,6 @@ cmp.setup({
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
-    -- documentation = {
-    --   border = 'rounded',
-    --   winhighlight = 'FloatBorder:FloatBorder,Normal:Normal',
-    -- },
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
