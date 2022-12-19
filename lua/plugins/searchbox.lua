@@ -4,7 +4,7 @@ require('searchbox').setup({
     border = {
       -- other popup border options
       -- do not include `highlight` here
-      highlight = 'Normal:Normal FloatBorder:Normal',
+      highlight = 'Normal:Normal, FloatBorder:Normal',
     },
     win_options = {
       winhighlight = 'Normal:Normal',
