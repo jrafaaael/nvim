@@ -41,11 +41,12 @@ require('packer').startup({ function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
 
+  -- Intellisense
+  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-vsnip'
   use 'rafamadriz/friendly-snippets'
   use 'hrsh7th/vim-vsnip'
@@ -67,7 +68,7 @@ require('packer').startup({ function(use)
   use 'ray-x/lsp_signature.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'folke/trouble.nvim'
-  use 'nvim-pack/nvim-spectre'
+  -- use 'windwp/nvim-spectre'
   use 'mfussenegger/nvim-dap'
   use {
     'akinsho/toggleterm.nvim',
@@ -102,14 +103,19 @@ require('packer').startup({ function(use)
   use 'folke/which-key.nvim'
   use 'ellisonleao/glow.nvim'
   use 'mbbill/undotree'
+
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end,
-config = {
-  display = {
-    open_fn = function()
-      return require('packer.util').float({ border = 'rounded' })
-    end
+  config = {
+    display = {
+      open_fn = function()
+        return require('packer.util').float({ border = 'rounded' })
+      end
+    }
   }
-}})
+})
 
 vim.cmd([[
   augroup packer_user_config
