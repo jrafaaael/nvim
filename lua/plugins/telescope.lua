@@ -1,19 +1,35 @@
 local actions = require('telescope.actions')
 local telescope = require('telescope')
 
-telescope.setup{
+telescope.setup {
   defaults = {
     mappings = {
       i = {
         ["<esc>"] = actions.close
       },
     },
-    file_ignore_patterns = { '.git/*', 'node_modules', 'env/*' },
+    file_ignore_patterns = { '^.git/', 'node_modules', 'venv' },
     layout_config = {
       prompt_position = 'top',
     },
     prompt_prefix = '',
+    vimgrep_arguments = {
+      "rg",
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      "--glob",
+      "!package-lock.json"
+    }
   },
+  pickers = {
+    find_files = {
+      hidden = true,
+      no_ignore = false
+    }
+  }
   -- extension = {
   --   ["ui-select"] = {
   --     require("telescope.themes").get_dropdown {
