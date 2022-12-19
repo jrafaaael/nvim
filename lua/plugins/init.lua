@@ -7,12 +7,9 @@ require('plugins.bufferline')
 require('plugins.neodim')
 require('plugins.lspsaga')
 
--- LSP
-require('plugins.lsp')
 require('plugins.cmp')
 
 -- IDE
-require('plugins.nvim-tree')
 require('plugins.toggleterm')
 require('plugins.nvim-treesitter')
 require('plugins.indent-blankline')
