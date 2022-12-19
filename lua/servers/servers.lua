@@ -101,4 +101,5 @@ vim.g.SERVERS = {
   astro = {},
   tsserver = {},
   svelte = {},
+  volar = {},
 }
