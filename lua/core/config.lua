@@ -1,11 +1,5 @@
 local opt = vim.opt
 local g = vim.g
-local signs = {
-  Hint = "",
-  Info = "",
-  Warn = "",
-  Error = "",
-}
 
 g.mapleader = ' '
 
@@ -42,8 +36,3 @@ opt.list = true
 opt.timeoutlen = 300
 opt.pumheight = 10
 opt.signcolumn = 'yes'
-
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
