@@ -31,7 +31,7 @@ require('packer').startup({ function(use)
   use 'onsails/lspkind.nvim'
   use {
     'akinsho/bufferline.nvim',
-    tag = "v2.*"
+    tag = "v3.*"
   }
   use({
     "glepnir/lspsaga.nvim",
