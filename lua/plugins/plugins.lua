@@ -3,6 +3,11 @@ return require('packer').startup({function()
 
   -- Utils
   use 'nvim-lua/plenary.nvim'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use "jayp0521/mason-null-ls.nvim"
+  use "jayp0521/mason-nvim-dap.nvim"
+
 
   -- UI
   use 'navarasu/onedark.nvim'
