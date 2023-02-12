@@ -65,7 +65,7 @@ vim.g.SERVERS = {
     -- }
   },
   pyright = {},
-  sumneko_lua = {
+  lua_ls = {
     settings = {
       Lua = {
         runtime = {
