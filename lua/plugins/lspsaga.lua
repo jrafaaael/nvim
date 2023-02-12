@@ -1,6 +1,6 @@
 local saga = require('lspsaga')
 
-saga.init_lsp_saga({
+saga.setup({
   rename_action_quit = "<ESC>",
   symbol_in_winbar = {
     enable = false,
