@@ -25,6 +25,7 @@ require('plugins.searchbox')
 
 -- git
 require('plugins.gitsigns')
+require('plugins.git-conflict')
 
 -- Fuzzy finder
 require('plugins.telescope')

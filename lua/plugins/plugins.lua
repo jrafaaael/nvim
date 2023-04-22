@@ -93,6 +93,10 @@ require('packer').startup({ function(use)
   -- git
   use 'lewis6991/gitsigns.nvim'
   use 'kdheepak/lazygit.nvim'
+  use {
+    'akinsho/git-conflict.nvim',
+    tag = "*"
+  }
 
   -- Fuzzy finder
   use 'nvim-telescope/telescope.nvim'
