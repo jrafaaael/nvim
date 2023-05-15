@@ -1,4 +1,4 @@
-require('plugins')
-require('utils')
 require('core')
 require('servers')
+require('plugins')
+require('utils')
