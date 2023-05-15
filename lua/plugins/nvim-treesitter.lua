@@ -3,7 +3,7 @@ local cmd = vim.cmd
 require 'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = { 'typescript', 'javascript', 'tsx', 'vue', 'css', 'html', 'go', 'json', 'lua', 'vim', 'python',
-    'markdown', 'prisma', 'yaml', 'astro', 'svelte' },
+    'markdown', 'markdown_inline', 'prisma', 'yaml', 'astro', 'svelte', 'php' },
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,

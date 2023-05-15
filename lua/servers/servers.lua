@@ -102,4 +102,5 @@ vim.g.SERVERS = {
   tsserver = {},
   svelte = {},
   volar = {},
+  intelephense = {},
 }
